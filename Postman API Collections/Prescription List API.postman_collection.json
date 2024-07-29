@@ -1,0 +1,65 @@
+{
+	"info": {
+		"_postman_id": "9f66f8f8-4b38-42e6-b605-d0d518db0e67",
+		"name": "Prescription List API",
+		"description": "Collection for managing and retrieving prescription data",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "20806872"
+	},
+	"item": [
+		{
+			"name": "Get Patients",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTQ4N2E2MTJhZmQzNmFhYjQ3OWYxYSIsInVzZXJUeXBlIjoiQWRtaW4iLCJpYXQiOjE3MjIyMzU3OTcsImV4cCI6MTc1Mzc3MTc5N30.WOSQ3nONDuSo40whGlFHLlfzn82MEA-eVnhako-VWyw",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:3001/patients"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Doctors",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTQ4N2E2MTJhZmQzNmFhYjQ3OWYxYSIsInVzZXJUeXBlIjoiQWRtaW4iLCJpYXQiOjE3MjIyMzU3OTcsImV4cCI6MTc1Mzc3MTc5N30.WOSQ3nONDuSo40whGlFHLlfzn82MEA-eVnhako-VWyw",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:3001/doctors"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Prescriptions",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTQ4N2E2MTJhZmQzNmFhYjQ3OWYxYSIsInVzZXJUeXBlIjoiQWRtaW4iLCJpYXQiOjE3MjIyMzU3OTcsImV4cCI6MTc1Mzc3MTc5N30.WOSQ3nONDuSo40whGlFHLlfzn82MEA-eVnhako-VWyw",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"patientId\": \"examplePatientId\",\n  \"doctorId\": \"exampleDoctorId\"\n}"
+				},
+				"url": "http://localhost:3001/prescriptions"
+			},
+			"response": []
+		}
+	]
+}

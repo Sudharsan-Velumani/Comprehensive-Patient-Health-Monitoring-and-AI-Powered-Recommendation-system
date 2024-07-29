@@ -1,0 +1,54 @@
+{
+	"info": {
+		"_postman_id": "0c7a6f3b-a2b4-44f5-ae32-86a968331dbb",
+		"name": "Doctor List API",
+		"description": "Collection for managing doctor records",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "20806872"
+	},
+	"item": [
+		{
+			"name": "Get Doctors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/doctors?name={{name}}",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"doctors"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "{{name}}",
+							"description": "Filter doctors by name"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Doctor",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:3001/doctors/{{id}}"
+			},
+			"response": []
+		}
+	]
+}

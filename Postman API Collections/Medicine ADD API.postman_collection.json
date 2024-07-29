@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "c037f07f-e822-41d5-95f2-2cbd65d8dcab",
+		"name": "Medicine ADD API",
+		"description": "Collection for managing medicines",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "20806872"
+	},
+	"item": [
+		{
+			"name": "Add Medicine",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Aspirin\",\n  \"description\": \"Used to reduce pain, fever, or inflammation\",\n  \"price\": 5.99,\n  \"company\": \"PharmaCo\"\n}"
+				},
+				"url": "localhost:3001/medicines"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Medicines",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:3001/medicines"
+			},
+			"response": []
+		}
+	]
+}

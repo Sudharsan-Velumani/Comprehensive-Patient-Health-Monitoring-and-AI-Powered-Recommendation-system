@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "ff77285c-ef7b-442c-814c-98dd5e54bb00",
+		"name": "Patient Profile API",
+		"description": "Collection for managing and updating patient profiles",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "20806872"
+	},
+	"item": [
+		{
+			"name": "Get Patient Profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTNjYmIwYTRkNGI1MTU1MjU2Njg1NyIsInVzZXJUeXBlIjoiUGF0aWVudCIsImlhdCI6MTcyMjIzNTA2NywiZXhwIjoxNzUzNzcxMDY3fQ.WqzuTs8OUC-yfHcstePmE4Ffr4xVl712XQewXilAbUE",
+						"type": "text"
+					}
+				],
+				"url": "localhost:3001/profile/patient/{{patientUserId}}"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Patient Profile",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTNjYmIwYTRkNGI1MTU1MjU2Njg1NyIsInVzZXJUeXBlIjoiUGF0aWVudCIsImlhdCI6MTcyMjIzNTA2NywiZXhwIjoxNzUzNzcxMDY3fQ.WqzuTs8OUC-yfHcstePmE4Ffr4xVl712XQewXilAbUE",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"username\": \"johndoe\",\n  \"email\": \"johndoe@example.com\",\n  \"phone\": \"1234567890\",\n  \"password\": \"newPassword123\",\n  \"confirmPassword\": \"newPassword123\",\n  \"address\": \"123 Main St\",\n  \"gender\": \"Male\",\n  \"dob\": \"1990-01-01\",\n  \"userId\": \"userId123\"\n}"
+				},
+				"url": "localhost:3001/patients/{{patientId}}"
+			},
+			"response": []
+		}
+	]
+}

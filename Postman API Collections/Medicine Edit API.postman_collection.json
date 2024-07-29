@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "50f0aaac-023b-47b6-9f13-763ea11abd34",
+		"name": "Medicine Edit API",
+		"description": "Collection for managing medicines",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "20806872"
+	},
+	"item": [
+		{
+			"name": "Get Medicine by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/medicines/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"medicines",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Medicine",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"company\": \"New PharmaCo\",\n  \"name\": \"Updated Aspirin\",\n  \"description\": \"Updated description for Aspirin\",\n  \"price\": 6.99\n}"
+				},
+				"url": {
+					"raw": "localhost:3001/medicines/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"medicines",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

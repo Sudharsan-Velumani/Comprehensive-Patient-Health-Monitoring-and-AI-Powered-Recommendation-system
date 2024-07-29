@@ -1,0 +1,44 @@
+{
+	"info": {
+		"_postman_id": "bd96af89-5727-4a8e-a76d-5e454abe2cb4",
+		"name": "Patient List API",
+		"description": "Collection for managing patients",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "20806872"
+	},
+	"item": [
+		{
+			"name": "Get Patients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/patients?name=",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"patients"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Patient",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "localhost:3001/patients/{{id}}"
+			},
+			"response": []
+		}
+	]
+}

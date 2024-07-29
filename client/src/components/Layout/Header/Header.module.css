@@ -1,0 +1,10 @@
+#header{
+    color: rgb(0, 19, 104);
+}
+
+
+@media all and (max-width: 720px) {
+    .accountIcon {
+      display: none;
+    }
+  }

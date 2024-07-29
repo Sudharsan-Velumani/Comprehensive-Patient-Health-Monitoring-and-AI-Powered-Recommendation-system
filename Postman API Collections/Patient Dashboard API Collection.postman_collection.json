@@ -1,0 +1,49 @@
+{
+	"info": {
+		"_postman_id": "918db045-22df-4aaf-a71d-be7c9157bf05",
+		"name": "Patient Dashboard API Collection",
+		"description": "Collection for testing the Patient Dashboard APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "20806872"
+	},
+	"item": [
+		{
+			"name": "Get Appointments",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTNjYmIwYTRkNGI1MTU1MjU2Njg1NyIsInVzZXJUeXBlIjoiUGF0aWVudCIsImlhdCI6MTcyMjIzNTA2NywiZXhwIjoxNzUzNzcxMDY3fQ.WqzuTs8OUC-yfHcstePmE4Ffr4xVl712XQewXilAbUE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"isTimeSlotAvailable\": false}"
+				},
+				"url": "http://localhost:3001/appointments"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Prescriptions",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTNjYmIwYTRkNGI1MTU1MjU2Njg1NyIsInVzZXJUeXBlIjoiUGF0aWVudCIsImlhdCI6MTcyMjIzNTA2NywiZXhwIjoxNzUzNzcxMDY3fQ.WqzuTs8OUC-yfHcstePmE4Ffr4xVl712XQewXilAbUE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{}"
+				},
+				"url": "http://localhost:3001/prescriptions"
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "764b1523-4459-46c1-ab52-32cf18a978f5",
+		"name": "Doctor Edit API",
+		"description": "Collection for managing doctor records",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "20806872"
+	},
+	"item": [
+		{
+			"name": "Get Doctor By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:3001/doctors/{{id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Doctor",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"username\": \"johndoe\",\n  \"email\": \"johndoe@example.com\",\n  \"phone\": \"123-456-7890\",\n  \"password\": \"newpassword\",\n  \"confirmPassword\": \"newpassword\",\n  \"department\": \"Cardiology\",\n  \"userId\": \"user_id_here\"\n}"
+				},
+				"url": "localhost:3001/doctors/{{id}}"
+			},
+			"response": []
+		}
+	]
+}

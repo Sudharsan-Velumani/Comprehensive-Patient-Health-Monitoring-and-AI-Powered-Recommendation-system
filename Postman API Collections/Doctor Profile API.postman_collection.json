@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "563e9050-47d3-4b90-863f-beb7a428c1c6",
+		"name": "Doctor Profile API",
+		"description": "Collection for managing and updating doctor profiles",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "20806872"
+	},
+	"item": [
+		{
+			"name": "Get Doctor Profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTRjZTFkYTJkNWFiODQ0NzliMjg2MSIsInVzZXJUeXBlIjoiRG9jdG9yIiwiaWF0IjoxNzIyMjM1NTYwLCJleHAiOjE3NTM3NzE1NjB9.hyG8utGSi6zum3tAEe1sN1baAiQvOl6AXPoEl0IXuCE",
+						"type": "text"
+					}
+				],
+				"url": "localhost:3001/profile/doctor/{{doctorUserId}}"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Doctor Profile",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTRjZTFkYTJkNWFiODQ0NzliMjg2MSIsInVzZXJUeXBlIjoiRG9jdG9yIiwiaWF0IjoxNzIyMjM1NTYwLCJleHAiOjE3NTM3NzE1NjB9.hyG8utGSi6zum3tAEe1sN1baAiQvOl6AXPoEl0IXuCE",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"username\": \"johndoe\",\n  \"email\": \"johndoe@example.com\",\n  \"phone\": \"1234567890\",\n  \"password\": \"newPassword123\",\n  \"confirmPassword\": \"newPassword123\",\n  \"department\": \"Cardiology\",\n  \"userId\": \"userId123\"\n}"
+				},
+				"url": "localhost:3001/profile/doctor/{{doctorId}}"
+			},
+			"response": []
+		}
+	]
+}

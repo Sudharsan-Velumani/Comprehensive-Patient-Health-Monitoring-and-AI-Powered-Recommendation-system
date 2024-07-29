@@ -1,0 +1,29 @@
+{
+	"info": {
+		"_postman_id": "aa8efffd-1902-4e30-844d-cd9431603b66",
+		"name": "Patient ADD API",
+		"description": "Collection for managing patients",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "20806872"
+	},
+	"item": [
+		{
+			"name": "Add Patient",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"username\": \"johndoe\",\n  \"email\": \"john.doe@example.com\",\n  \"phone\": \"123-456-7890\",\n  \"password\": \"password123\",\n  \"confirmPassword\": \"password123\",\n  \"address\": \"123 Main St\",\n  \"gender\": \"Male\",\n  \"dob\": \"1990-01-01\"\n}"
+				},
+				"url": "localhost:3001/patients"
+			},
+			"response": []
+		}
+	]
+}

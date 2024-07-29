@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "5d08102f-e9fe-4aa1-aa08-5378bd4c5de5",
+		"name": "Prescription Management API",
+		"description": "Collection for managing prescriptions and medicines",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "20806872"
+	},
+	"item": [
+		{
+			"name": "Get Medicines",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:3001/medicines"
+			},
+			"response": []
+		},
+		{
+			"name": "Submit Prescription",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"patient\": \"patient_id_here\",\n  \"remarks\": \"Example remarks\",\n  \"prescribedMed\": [\n    {\n      \"id\": 1,\n      \"medicineId\": \"medicine_id_here\",\n      \"qty\": 2,\n      \"dosage\": \"2 times daily\"\n    }\n  ]\n}"
+				},
+				"url": "localhost:3001/prescriptions"
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "9a62f00f-4849-4cbf-9a66-96e2d430156b",
+		"name": "Doctor Appointment API",
+		"description": "Collection for managing doctor appointments",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "20806872"
+	},
+	"item": [
+		{
+			"name": "Get Departments",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTRjZTFkYTJkNWFiODQ0NzliMjg2MSIsInVzZXJUeXBlIjoiRG9jdG9yIiwiaWF0IjoxNzIyMjM1NTYwLCJleHAiOjE3NTM3NzE1NjB9.hyG8utGSi6zum3tAEe1sN1baAiQvOl6AXPoEl0IXuCE",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:3001/departments"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Doctors",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTRjZTFkYTJkNWFiODQ0NzliMjg2MSIsInVzZXJUeXBlIjoiRG9jdG9yIiwiaWF0IjoxNzIyMjM1NTYwLCJleHAiOjE3NTM3NzE1NjB9.hyG8utGSi6zum3tAEe1sN1baAiQvOl6AXPoEl0IXuCE",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:3001/doctors"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Patients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3001/patients"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Available Slots",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTRjZTFkYTJkNWFiODQ0NzliMjg2MSIsInVzZXJUeXBlIjoiRG9jdG9yIiwiaWF0IjoxNzIyMjM1NTYwLCJleHAiOjE3NTM3NzE1NjB9.hyG8utGSi6zum3tAEe1sN1baAiQvOl6AXPoEl0IXuCE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"isTimeSlotAvailable\": true, \"appDate\": \"2024-07-29\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3001/appointments"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Booked Slots",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTRjZTFkYTJkNWFiODQ0NzliMjg2MSIsInVzZXJUeXBlIjoiRG9jdG9yIiwiaWF0IjoxNzIyMjM1NTYwLCJleHAiOjE3NTM3NzE1NjB9.hyG8utGSi6zum3tAEe1sN1baAiQvOl6AXPoEl0IXuCE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"isTimeSlotAvailable\": false, \"appDate\": \"2024-07-29\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3001/appointments"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Appointment",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTRjZTFkYTJkNWFiODQ0NzliMjg2MSIsInVzZXJUeXBlIjoiRG9jdG9yIiwiaWF0IjoxNzIyMjM1NTYwLCJleHAiOjE3NTM3NzE1NjB9.hyG8utGSi6zum3tAEe1sN1baAiQvOl6AXPoEl0IXuCE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"appDate\": \"2024-07-29\", \"appTime\": \"09:00 AM\", \"doctorId\": 1, \"patientId\": 1}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3001/appointments"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Appointment",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTRjZTFkYTJkNWFiODQ0NzliMjg2MSIsInVzZXJUeXBlIjoiRG9jdG9yIiwiaWF0IjoxNzIyMjM1NTYwLCJleHAiOjE3NTM3NzE1NjB9.hyG8utGSi6zum3tAEe1sN1baAiQvOl6AXPoEl0IXuCE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"appointmentId\": 1}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3001/appointments"
+			},
+			"response": []
+		}
+	]
+}

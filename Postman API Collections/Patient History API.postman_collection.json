@@ -1,0 +1,35 @@
+{
+	"info": {
+		"_postman_id": "bb313701-6316-442c-bbf6-56cc73ba36e7",
+		"name": "Patient History API",
+		"description": "Collection for managing patient details and history",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "20806872"
+	},
+	"item": [
+		{
+			"name": "Get Patient Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:3001/patients/{{id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Patient History",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTQ4N2E2MTJhZmQzNmFhYjQ3OWYxYSIsInVzZXJUeXBlIjoiQWRtaW4iLCJpYXQiOjE3MjIyMzU3OTcsImV4cCI6MTc1Mzc3MTc5N30.WOSQ3nONDuSo40whGlFHLlfzn82MEA-eVnhako-VWyw",
+						"type": "text"
+					}
+				],
+				"url": "localhost:3001/patients/history/{{id}}"
+			},
+			"response": []
+		}
+	]
+}

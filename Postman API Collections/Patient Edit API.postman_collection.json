@@ -1,0 +1,29 @@
+{
+	"info": {
+		"_postman_id": "03367711-bfdf-4880-84c9-c25b73a9120c",
+		"name": "Patient Edit API",
+		"description": "Collection for managing patients",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "20806872"
+	},
+	"item": [
+		{
+			"name": "Edit Patient",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"username\": \"johndoe\",\n  \"email\": \"john.doe@example.com\",\n  \"phone\": \"123-456-7890\",\n  \"password\": \"newpassword123\",\n  \"confirmPassword\": \"newpassword123\",\n  \"address\": \"123 Main St\",\n  \"gender\": \"Male\",\n  \"dob\": \"1990-01-01\",\n  \"userId\": \"unique-user-id\"\n}"
+				},
+				"url": "localhost:3001/patients/{{id}}"
+			},
+			"response": []
+		}
+	]
+}

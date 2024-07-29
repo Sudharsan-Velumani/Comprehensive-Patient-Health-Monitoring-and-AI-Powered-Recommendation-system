@@ -1,0 +1,30 @@
+{
+	"info": {
+		"_postman_id": "f2d9d2bf-c365-4fa2-920d-3d1b8f72fce6",
+		"name": "Diabetes Prediction API",
+		"description": "Collection for predicting diabetes and receiving recommendations",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "20806872"
+	},
+	"item": [
+		{
+			"name": "Predict Diabetes",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"gender\": 0,\n  \"age\": 45,\n  \"hypertension\": 1,\n  \"heart_disease\": 0,\n  \"smoking_history\": 1,\n  \"bmi\": 22.5,\n  \"HbA1c_level\": 6.2,\n  \"blood_glucose_level\": 120\n}"
+				},
+				"url": "http://localhost:5000/diabetes/predict"
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "48f6ca0d-965a-40df-8940-15bfd95ce6a0",
+		"name": "Admin Appointment API",
+		"description": "Collection for testing the Admin Appointment API.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "20806872"
+	},
+	"item": [
+		{
+			"name": "Get Departments",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTQ4N2E2MTJhZmQzNmFhYjQ3OWYxYSIsInVzZXJUeXBlIjoiQWRtaW4iLCJpYXQiOjE3MjIyMzU3OTcsImV4cCI6MTc1Mzc3MTc5N30.WOSQ3nONDuSo40whGlFHLlfzn82MEA-eVnhako-VWyw",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:3001/departments"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Doctors",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTQ4N2E2MTJhZmQzNmFhYjQ3OWYxYSIsInVzZXJUeXBlIjoiQWRtaW4iLCJpYXQiOjE3MjIyMzU3OTcsImV4cCI6MTc1Mzc3MTc5N30.WOSQ3nONDuSo40whGlFHLlfzn82MEA-eVnhako-VWyw",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:3001/doctors"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Patients",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTQ4N2E2MTJhZmQzNmFhYjQ3OWYxYSIsInVzZXJUeXBlIjoiQWRtaW4iLCJpYXQiOjE3MjIyMzU3OTcsImV4cCI6MTc1Mzc3MTc5N30.WOSQ3nONDuSo40whGlFHLlfzn82MEA-eVnhako-VWyw",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:3001/patients"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Available Slots",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTQ4N2E2MTJhZmQzNmFhYjQ3OWYxYSIsInVzZXJUeXBlIjoiQWRtaW4iLCJpYXQiOjE3MjIyMzU3OTcsImV4cCI6MTc1Mzc3MTc5N30.WOSQ3nONDuSo40whGlFHLlfzn82MEA-eVnhako-VWyw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"isTimeSlotAvailable\": true,\n  \"appDate\": \"{{date}}\",\n  \"doctorID\": \"{{doctorID}}\"\n}"
+				},
+				"url": "http://localhost:3001/appointments"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Booked Slots",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTQ4N2E2MTJhZmQzNmFhYjQ3OWYxYSIsInVzZXJUeXBlIjoiQWRtaW4iLCJpYXQiOjE3MjIyMzU3OTcsImV4cCI6MTc1Mzc3MTc5N30.WOSQ3nONDuSo40whGlFHLlfzn82MEA-eVnhako-VWyw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"isTimeSlotAvailable\": false,\n  \"appDate\": \"{{date}}\",\n  \"doctorID\": \"{{doctorID}}\"\n}"
+				},
+				"url": "http://localhost:3001/appointments"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Appointment",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTQ4N2E2MTJhZmQzNmFhYjQ3OWYxYSIsInVzZXJUeXBlIjoiQWRtaW4iLCJpYXQiOjE3MjIyMzU3OTcsImV4cCI6MTc1Mzc3MTc5N30.WOSQ3nONDuSo40whGlFHLlfzn82MEA-eVnhako-VWyw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"appDate\": \"{{appDate}}\",\n  \"appTime\": \"{{appTime}}\",\n  \"doctorId\": \"{{doctorId}}\",\n  \"patientId\": \"{{patientId}}\"\n}"
+				},
+				"url": "http://localhost:3001/appointments"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Slots",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTQ4N2E2MTJhZmQzNmFhYjQ3OWYxYSIsInVzZXJUeXBlIjoiQWRtaW4iLCJpYXQiOjE3MjIyMzU3OTcsImV4cCI6MTc1Mzc3MTc5N30.WOSQ3nONDuSo40whGlFHLlfzn82MEA-eVnhako-VWyw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"appDate\": \"{{appDate}}\",\n  \"timeSlots\": {{timeSlots}},\n  \"doctorID\": \"{{doctorID}}\"\n}"
+				},
+				"url": "http://localhost:3001/appointments/add"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Appointment",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTQ4N2E2MTJhZmQzNmFhYjQ3OWYxYSIsInVzZXJUeXBlIjoiQWRtaW4iLCJpYXQiOjE3MjIyMzU3OTcsImV4cCI6MTc1Mzc3MTc5N30.WOSQ3nONDuSo40whGlFHLlfzn82MEA-eVnhako-VWyw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"appointmentId\": \"{{appointmentId}}\"\n}"
+				},
+				"url": "http://localhost:3001/appointments"
+			},
+			"response": []
+		}
+	]
+}

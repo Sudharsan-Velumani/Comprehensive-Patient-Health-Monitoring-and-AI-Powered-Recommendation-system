@@ -1,0 +1,29 @@
+{
+	"info": {
+		"_postman_id": "589db609-e414-430f-ba0e-d88e6fd7126e",
+		"name": "Doctor ADD API",
+		"description": "Collection for managing doctor records",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "20806872"
+	},
+	"item": [
+		{
+			"name": "Add Doctor",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"username\": \"johndoe\",\n  \"email\": \"johndoe@example.com\",\n  \"phone\": \"1234567890\",\n  \"password\": \"password123\",\n  \"confirmPassword\": \"password123\",\n  \"department\": \"Cardiology\"\n}"
+				},
+				"url": "http://localhost:3001/doctors"
+			},
+			"response": []
+		}
+	]
+}
