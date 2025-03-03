@@ -32,7 +32,12 @@ const getPrescriptions = async (req, res) => {
                         }
                     }
                 ]
-            }).then((prescriptions) => prescriptions.filter((pre => pre.appointmentId != null)));
+            })
+            .then((prescriptions) => prescriptions.filter(pre => 
+              pre.appointmentId != null &&
+              pre.appointmentId.patientId?.userId &&
+              pre.appointmentId.doctorId?.userId
+            ));
             
 
         } else if (userType == 'Doctor') {
@@ -75,7 +80,11 @@ const getPrescriptions = async (req, res) => {
                         }
                     }
                 ]
-            }).then((prescriptions) => prescriptions.filter((pre => pre.appointmentId != null)));
+            }).then((prescriptions) => prescriptions.filter(pre => 
+                pre.appointmentId != null &&
+                pre.appointmentId.patientId?.userId &&
+                pre.appointmentId.doctorId?.userId
+              ));
 
         } else {
             let matchdoctorpatient = {};
@@ -118,7 +127,11 @@ const getPrescriptions = async (req, res) => {
                         }
                     }
                 ]
-            }).then((prescriptions) => prescriptions.filter((pre => pre.appointmentId != null)));
+            }).then((prescriptions) => prescriptions.filter(pre => 
+                pre.appointmentId != null &&
+                pre.appointmentId.patientId?.userId &&
+                pre.appointmentId.doctorId?.userId
+              ));
         }
 
         res.json({ message: "success", 'prescriptions': prescriptions });
